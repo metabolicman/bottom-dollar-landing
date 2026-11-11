@@ -18,9 +18,11 @@ To preview locally, open `index.html` in a browser, or run `python3 -m http.serv
 
 | File | What it is |
 |---|---|
-| `index.html` | The whole page. No JavaScript. |
+| `index.html` | The whole page. One tiny inline script turns motion on. |
+| `motion.js` | Plays each animation once when it scrolls into view. Page works fully without it. |
 | `styles.css` | All styles, mobile first. |
-| `assets/` | Logo, icon, and stamp SVGs from the Bottom Dollar brand files. |
+| `assets/` | Logo, icon, stamp, and receipt thumbnail SVGs. |
+| `assets/img/` | Two-color WebP illustrations, two sizes each. |
 | `assets/fonts/` | TeX Gyre Schola Bold (a free Century Schoolbook-style font) and its license. |
 | `docs/screenshots/` | QA screenshots at 375px and 1440px. |
 | `CHANGELOG.md` | What changed and when. |
@@ -59,6 +61,8 @@ Features on the page describe the v1 plan in Build Spec v1. They are not live ye
 - The phone mock is the first screen's focal point, because the weekly text is the product.
 - Hard offset shadow on the phone only, to lift the one object that matters on the first screen.
 - Sample table turns into one block per job on phones, so the Profit column is never cut off.
+- Motion: one play-through in the hero phone and one stamp landing. Each plays once and ends still, so nobody has to wait or reread. Reduced motion and no-JS show the final state.
+- Illustrations: two-color prints (navy on carbon yellow) of the trade world, no people. They set the scene and never stand in for proof.
 - FAQ uses native details and summary tags, so it works with a keyboard and needs no JavaScript.
 - No light or dark toggle. The page is light only, on purpose, because older readers on job sites need strong contrast in daylight.
 

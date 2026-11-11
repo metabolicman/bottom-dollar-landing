@@ -8,6 +8,17 @@
   <link rel="icon" href="assets/bottom-dollar-icon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/texgyreschola-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    /* Turn on motion only when JS runs and the visitor allows motion.
+       If motion.js never loads, show everything after 4 seconds. */
+    (function (d) {
+      if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        d.classList.add('motion');
+        window.__bdFailsafe = setTimeout(function () { d.classList.remove('motion'); }, 4000);
+      }
+    })(document.documentElement);
+  </script>
+  <script src="motion.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to the main page</a>
@@ -42,19 +53,27 @@
           </ul>
         </div>
 
-        <figure class="phone" aria-labelledby="phone-cap">
+        <figure class="phone" aria-labelledby="phone-cap" data-play>
           <div class="phone-top">
             <img src="assets/bottom-dollar-icon.svg" alt="" width="40" height="40">
             <span>Bottom Dollar</span>
           </div>
           <div class="thread">
-            <p class="day">Monday</p>
-            <div class="bubble">
+            <p class="day" data-step="1">Thursday</p>
+            <div class="bubble bubble-out" data-step="1">
+              <img src="assets/receipt-thumb.svg" alt="Photo of a receipt" width="48" height="66">
+              <p>Smith</p>
+            </div>
+            <div class="bubble bubble-in" data-step="2">
+              <p>Got it. $84.12 for the Smith job. Reply FIX if that is wrong.</p>
+            </div>
+            <p class="day" data-step="3">Monday</p>
+            <div class="bubble" data-step="3">
               <p><strong>Bottom Dollar, week of Nov 9</strong></p>
               <p>Smith: $1,140 profit so far</p>
               <p>Lopez: <span class="loss">losing $310.</span> Costs are over the price.</p>
               <p>Oak St: No hours sent. Reply with hours to see profit.</p>
-              <p><span class="loss">Not billed yet:</span> Smith, moved outlet, $150. Lopez, $212 in parts bought after you marked it done.</p>
+              <p><span class="loss mark">Not billed yet:</span> Smith, moved outlet, $150. Lopez, $212 in parts bought after you marked it done.</p>
               <p>See more: [LINK]</p>
             </div>
           </div>
@@ -91,7 +110,7 @@
               </tbody>
             </table>
           </div>
-          <div class="stamp" aria-label="Not billed yet, 362 dollars">
+          <div class="stamp" data-play aria-label="Not billed yet, 362 dollars">
             <span class="stamp-big">Not billed yet $362</span>
             <span class="stamp-small">Smith outlet $150. Lopez parts $212.</span>
           </div>
@@ -181,7 +200,12 @@
             <li><span>Pay for a year</span><b>$790</b></li>
             <li><span>Shoebox Catch-Up (optional)</span><b>$149 once</b></li>
           </ul>
-          <p class="small">Shoebox Catch-Up: upload photos of your old receipts and we file them under your jobs. Paying for a year saves $158 compared with 12 months at $79.</p>
+          <div class="shoebox-row">
+            <figure class="art">
+              <img src="assets/img/shoebox-320.webp" srcset="assets/img/shoebox-320.webp 320w, assets/img/shoebox-640.webp 640w" sizes="(min-width: 900px) 128px, 96px" alt="" width="320" height="320" loading="lazy" decoding="async">
+            </figure>
+            <p class="small">Shoebox Catch-Up: upload photos of your old receipts and we file them under your jobs. Paying for a year saves $158 compared with 12 months at $79.</p>
+          </div>
           <a class="btn btn-wide" href="#signup">Start my first week</a>
         </div>
 
@@ -197,7 +221,12 @@
     <!-- QUICKBOOKS + NO APP -->
     <section id="fit" class="fit" aria-labelledby="fit-title">
       <div class="wrap">
-        <h2 id="fit-title" class="underline">Fits how you already work</h2>
+        <div class="fit-head">
+          <h2 id="fit-title"><span class="underline">Fits how you already work</span></h2>
+          <figure class="art">
+            <img src="assets/img/dash-receipts-640.webp" srcset="assets/img/dash-receipts-640.webp 640w, assets/img/dash-receipts-1200.webp 1200w" sizes="(min-width: 1140px) 530px, (min-width: 900px) 46vw, calc(100vw - 2.5rem)" alt="" width="640" height="480" loading="lazy" decoding="async">
+          </figure>
+        </div>
         <div class="fit-grid">
           <div>
             <h3>No app to download</h3>
@@ -254,6 +283,9 @@
     <!-- SIGNUP placeholder: checkout is not wired yet, so no dead form -->
     <section id="signup" class="signup" aria-labelledby="signup-title">
       <div class="wrap signup-wrap">
+        <figure class="art signup-art">
+          <img src="assets/img/van-jobsite-640.webp" srcset="assets/img/van-jobsite-640.webp 640w, assets/img/van-jobsite-1200.webp 1200w" sizes="(min-width: 700px) 640px, calc(100vw - 2.5rem)" alt="" width="640" height="360" loading="lazy" decoding="async">
+        </figure>
         <h2 id="signup-title">Start my first week</h2>
         <p class="soon">Online signup is coming soon.</p>
         <p>When it opens, it will take three short steps:</p>
