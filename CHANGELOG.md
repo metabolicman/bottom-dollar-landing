@@ -8,6 +8,8 @@
 - Tighter phone: 28px header icon, smaller receipt thumbnail (32x44), less bubble padding, caption moved under the phone. All text still 18px or larger.
 - Shorter sample text in the hero phone. Same jobs and numbers.
 - Desktop hero padding and heading size trimmed so the buttons sit well above the fold.
+- Phones (under 720px): the preview banner is one 14px line with shorter text ("Preview only. Signups are not open yet.") and scrolls away with the page. The header is one row: logo left, a 50px-tall "Start" button right (screen readers hear "Start my first week"). Banner plus header: 90px at 320, 375, and 390.
+- Phones: the "Text or call [PHONE]" line moved out of the header to just under the hero checklist, on one line. It still fits at 320px with a real 14-character number. Desktop header unchanged.
 
 ## 0.2.0, November 10, 2026 (branch design/motion-and-art)
 
