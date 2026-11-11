@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.2.1, November 11, 2026 (branch design/hero-phone-fit)
+
+- Desktop hero now fits one screen at 1280x720 and 1440x900. The phone is a fixed 496px tall (31rem) at full width, taller only on narrow desktops (900 to 1159px) so the finished text never clips.
+- The thread sits at the bottom of the phone like a real chat. On desktop, hidden messages take no space, and each new one pushes the older ones up inside the phone. The phone and page never change size.
+- Phones (under 900px) keep the old rule: hidden messages keep their space, so nothing below moves.
+- Tighter phone: 28px header icon, smaller receipt thumbnail (32x44), less bubble padding, caption moved under the phone. All text still 18px or larger.
+- Shorter sample text in the hero phone. Same jobs and numbers.
+- Desktop hero padding and heading size trimmed so the buttons sit well above the fold.
+- Phones (under 720px): the preview banner is one 14px line with shorter text ("Preview only. Signups are not open yet.") and scrolls away with the page. The header is one row: logo left, a 50px-tall "Start" button right (screen readers hear "Start my first week"). Banner plus header: 90px at 320, 375, and 390.
+- Phones: the "Text or call [PHONE]" line moved out of the header to just under the hero checklist, on one line. It still fits at 320px with a real 14-character number. Desktop header unchanged.
+
 ## 0.2.0, November 10, 2026 (branch design/motion-and-art)
 
 - Hero phone now plays a short story once: Thursday receipt photo goes out, "Got it" comes back, Monday report arrives, then a red underline draws under "Not billed yet." Under 3.5 seconds, ends still. No loop.

@@ -26,7 +26,7 @@ All images are two colors only: navy `#1E2A4A` on carbon yellow `#F6E7A1`. They 
 1. Hero phone (`.phone`, gets `data-play`). The thread now has four parts in this order:
    - "Thursday" day label (`data-step="1"`).
    - Outgoing bubble `.bubble.bubble-out` (`data-step="1"`): receipt thumbnail plus the word "Smith". Navy fill, yellow text, right aligned, max 75% wide.
-   - Incoming bubble `.bubble.bubble-in` (`data-step="2"`): "Got it. $84.12 for the Smith job. Reply FIX if that is wrong."
+   - Incoming bubble `.bubble.bubble-in` (`data-step="2"`): "Got it. $84.12 for Smith. Reply FIX if wrong." (shortened Nov 11)
    - "Monday" label and the weekly report bubble (`data-step="3"`). "Not billed yet:" gets class `mark`.
 2. Timing: step 1 at 0.2s, step 2 at 1.1s, step 3 at 2.0s, each 0.35s. The red underline under "Not billed yet:" draws from 2.7s to 3.3s. Total 3.3s. It plays once and never loops.
 3. Sample ticket stamp (`.stamp`, gets `data-play`): scales from 1.6 to 1 and fades in, 0.32s, starting 0.15s after it is on screen. It keeps its -3 degree tilt.
@@ -62,5 +62,6 @@ All images are two colors only: navy `#1E2A4A` on carbon yellow `#F6E7A1`. They 
 
 ## Open items
 
-- The receipt reply in the hero says "$84.12 for the Smith job." It matches the "How it works" example, minus the store name. Growth can change the wording, but keep it under about 60 characters so it stays two lines at 375px.
+- The receipt reply in the hero says "Got it. $84.12 for Smith. Reply FIX if wrong." Keep it under about 48 characters so it stays one line on desktop.
+- Nov 11 update: the desktop phone is a fixed height (31rem at 1160px and up, 34rem at 1024 to 1159px, 37rem at 900 to 1023px). Any new line of sample text must be checked at 900px, 1024px, and 1160px so the Thursday label is not clipped.
 - Growth layout limit: the outgoing bubble fits one short job name (up to about 10 characters) next to the receipt thumbnail.
