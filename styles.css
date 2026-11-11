@@ -512,3 +512,81 @@ address { font-style: normal; line-height: 1.6; }
 }
 .sep { display: none; }
 @media (max-width: 599px) { .sep { display: inline; } }
+
+/* ---------- Motion and art (design/motion-and-art) ----------
+   Rules: every animation plays once, ends in a still, readable state,
+   and lasts under 5 seconds in total. Nothing moves unless the head
+   script added .motion (JS on and no reduced-motion setting). */
+
+/* Hero thread: Thursday receipt out, reply in, Monday report */
+.bubble + .day, .bubble + .bubble { margin-top: 0.75rem; }
+.bubble-out {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+  max-width: 75%;
+  margin-left: auto;
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+  border-radius: 18px 18px 4px 18px;
+}
+.bubble-out img { width: 48px; height: 66px; flex: none; }
+.bubble-out p { font-weight: 700; }
+.bubble-in { max-width: 88%; }
+
+/* The red underline marks missed money without relying on color alone */
+.mark {
+  padding-bottom: 2px;
+  background: linear-gradient(var(--red), var(--red)) 0 100% / 100% 3px no-repeat;
+}
+
+.motion .phone [data-step] { opacity: 0; }
+.motion .phone.play [data-step] { animation: bd-rise 0.35s ease-out forwards; }
+.motion .phone.play .bubble-out[data-step] { animation-name: bd-send; }
+.motion .phone.play [data-step="1"] { animation-delay: 0.2s; }
+.motion .phone.play [data-step="2"] { animation-delay: 1.1s; }
+.motion .phone.play [data-step="3"] { animation-delay: 2s; }
+.motion .phone .mark { background-size: 0 3px; }
+.motion .phone.play .mark { animation: bd-underline 0.6s ease-out 2.7s forwards; }
+
+/* Stamp lands on the sample ticket */
+.motion .stamp[data-play] { opacity: 0; }
+.motion .stamp.play { animation: bd-stamp 0.32s cubic-bezier(0.2, 0.9, 0.3, 1.25) 0.15s forwards; }
+
+@keyframes bd-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes bd-send { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+@keyframes bd-underline { to { background-size: 100% 3px; } }
+@keyframes bd-stamp {
+  from { opacity: 0; transform: rotate(-3deg) scale(1.6); }
+  to { opacity: 1; transform: rotate(-3deg) scale(1); }
+}
+
+/* Belt and braces: a reduced-motion setting always wins */
+@media (prefers-reduced-motion: reduce) {
+  .motion .phone [data-step], .motion .stamp[data-play] { opacity: 1; animation: none; }
+  .motion .phone .mark { background-size: 100% 3px; animation: none; }
+}
+
+/* Illustrations: two-color prints in a plain ticket frame */
+.art {
+  margin: 0;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+}
+.art img { width: 100%; }
+
+.fit-head { display: grid; gap: 1.5rem; align-items: center; margin-bottom: 2rem; }
+.fit-head h2 { margin: 0; }
+@media (min-width: 900px) {
+  .fit-head { grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+}
+
+/* Float so the 18px text wraps beside the box, then runs full width */
+.shoebox-row { display: flow-root; }
+.shoebox-row .art { float: right; width: 96px; margin: 0.25rem 0 0.5rem 1rem; }
+.shoebox-row p { margin: 0; }
+@media (min-width: 900px) { .shoebox-row .art { width: 128px; } }
+
+.signup-art { max-width: 640px; margin-bottom: 2rem; }
