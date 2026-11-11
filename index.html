@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bottom Dollar | A weekly text with the profit on every job</title>
+  <meta name="description" content="Text your receipts and the job name to one number. Once a week you get one text with the profit on each job and the work you did but never billed. $79 a month.">
+  <link rel="icon" href="assets/bottom-dollar-icon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/texgyreschola-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the main page</a>
+
+  <p class="preview-bar">Preview page. Bottom Dollar is not open for signups yet.</p>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a href="#main" class="brand" aria-label="Bottom Dollar, back to top">
+        <img src="assets/bottom-dollar-logo.svg" alt="Bottom Dollar" width="1175" height="260">
+      </a>
+      <p class="header-phone">Questions? Text or call <span class="ph">[PHONE]</span></p>
+      <a class="btn btn-small" href="#signup">Start my first week</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO: sells the weekly profit answer and the unbilled catch -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Know what every job really left you.</h1>
+          <p class="lead">Text your receipts and the job name to one number. Once a week you get one text with the profit on each job. It also points out work you did but never billed.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#signup">Start my first week</a>
+            <a class="btn btn-ghost" href="#sample">See a sample week</a>
+          </div>
+          <ul class="hero-facts">
+            <li>No app to download</li>
+            <li>Your whole crew can text receipts</li>
+            <li>Works with QuickBooks Online</li>
+          </ul>
+        </div>
+
+        <figure class="phone" aria-labelledby="phone-cap">
+          <div class="phone-top">
+            <img src="assets/bottom-dollar-icon.svg" alt="" width="40" height="40">
+            <span>Bottom Dollar</span>
+          </div>
+          <div class="thread">
+            <p class="day">Monday</p>
+            <div class="bubble">
+              <p><strong>Bottom Dollar, week of Nov 9</strong></p>
+              <p>Smith: $1,140 profit so far</p>
+              <p>Lopez: <span class="loss">losing $310.</span> Costs are over the price.</p>
+              <p>Oak St: No hours sent. Reply with hours to see profit.</p>
+              <p><span class="loss">Not billed yet:</span> Smith, moved outlet, $150. Lopez, $212 in parts bought after you marked it done.</p>
+              <p>See more: [LINK]</p>
+            </div>
+          </div>
+          <figcaption id="phone-cap">Sample weekly text. Made-up jobs and numbers.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SAMPLE: the full ticket behind the text -->
+    <section id="sample" class="sample" aria-labelledby="sample-title">
+      <div class="wrap sample-grid">
+        <div class="sample-copy">
+          <h2 id="sample-title" class="underline">The math behind that text</h2>
+          <p>Every job gets the same simple math. Nothing is hidden.</p>
+          <p class="formula">Profit = job price + billed extra work &minus; materials &minus; crew hours &times; your hourly crew cost</p>
+          <p>You set your hourly crew cost once, with pay and taxes. If a job has no price yet, or nobody sent hours, we say so. We never show a profit that leaves out labor.</p>
+        </div>
+
+        <div class="ticket" role="group" aria-label="Sample weekly ticket">
+          <div class="ticket-head">
+            <span class="ticket-name">Bottom Dollar</span>
+            <span class="ticket-no">Weekly ticket<br><span class="sep">, </span>Week of Nov 9</span>
+          </div>
+          <p class="ticket-note">Sample numbers. Crew cost: $55 an hour.</p>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr><th scope="col">Job</th><th scope="col" class="num">Price</th><th scope="col" class="num">Materials</th><th scope="col" class="num">Crew hours</th><th scope="col" class="num">Profit</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Smith</th><td data-label="Price" class="num">4,500</td><td data-label="Materials" class="num">1,930</td><td data-label="Crew hours" class="num">26</td><td data-label="Profit" class="num">1,140</td></tr>
+                <tr><th scope="row" class="loss">Lopez</th><td data-label="Price" class="num">2,800</td><td data-label="Materials" class="num">1,680</td><td data-label="Crew hours" class="num">26</td><td data-label="Profit" class="num loss">Losing 310</td></tr>
+                <tr><th scope="row">Oak St</th><td data-label="Price" class="num">3,600</td><td data-label="Materials" class="num">1,240</td><td data-label="Crew hours" class="num">None sent</td><td data-label="Profit" class="num muted">No hours sent</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="stamp" aria-label="Not billed yet, 362 dollars">
+            <span class="stamp-big">Not billed yet $362</span>
+            <span class="stamp-small">Smith outlet $150. Lopez parts $212.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS: three steps, each with the actual text a contractor sends -->
+    <section id="how" class="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <h2 id="how-title" class="underline">How it works</h2>
+        <ol class="steps">
+          <li class="step">
+            <h3><span class="step-no">1.</span> Text a receipt</h3>
+            <p>Snap a photo of the receipt and text it to your Bottom Dollar number. Your crew can do the same from their own phones.</p>
+            <p class="sms">[photo] Smith</p>
+            <p class="sms sms-in">Got it. $84.12 at Home Depot for the Smith job. Reply FIX if that is wrong.</p>
+          </li>
+          <li class="step">
+            <h3><span class="step-no">2.</span> Tell us the job</h3>
+            <p>Put the job name with the photo. New job? Send the price so we can do the math. On Fridays we ask for crew hours.</p>
+            <p class="sms">New job Smith 4500</p>
+            <p class="sms">Smith 12, Lopez 6</p>
+          </li>
+          <li class="step">
+            <h3><span class="step-no">3.</span> Get one text a week</h3>
+            <p>One short text shows the profit on each job and any work that may not be billed. Tap the link for the full ticket.</p>
+            <p class="sms sms-in">Smith: $1,140 profit so far. Not billed yet: moved outlet, $150.</p>
+          </li>
+        </ol>
+        <p class="aside">Forgot the job name? We text back and ask, with a list of your open jobs. Blurry total? We ask for it. We do not guess.</p>
+      </div>
+    </section>
+
+    <!-- WHAT IT CATCHES -->
+    <section id="catches" class="catches" aria-labelledby="catches-title">
+      <div class="wrap">
+        <h2 id="catches-title" class="underline">What it catches</h2>
+        <p class="section-lead">Receipt apps file your paper. Bottom Dollar watches the money on each job and tells you when something looks off.</p>
+        <div class="catch-grid">
+          <div class="catch-col">
+            <h3 class="loss">Work you may not have billed</h3>
+            <dl class="catch-list">
+              <dt>Extra work you texted in</dt>
+              <dd>Text "Smith: moved outlet $150" and it shows up every week until you text "Billed Smith."</dd>
+              <dt>Parts bought after the job was done</dt>
+              <dd>If receipts keep coming in for a finished job, we ask if you billed for them.</dd>
+              <dt>Receipts with no job</dt>
+              <dd>Receipts nobody tied to a job get two reminders, then land on your weekly list.</dd>
+            </dl>
+          </div>
+          <div class="catch-col">
+            <h3>Jobs that are going bad</h3>
+            <dl class="catch-list">
+              <dt>The 80% heads-up</dt>
+              <dd>When a job's costs pass 80% of its price, you get a text while there is still time to act.</dd>
+              <dt>Jobs that are losing money</dt>
+              <dd>If costs go over the price, the weekly text says so and asks if there was extra work you have not billed.</dd>
+              <dt>Missing hours or prices</dt>
+              <dd>We remind you, at most twice a week per job. The text says "No hours sent" instead of a fake profit.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICE + PROMISE -->
+    <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+      <div class="wrap pricing-grid">
+        <div class="ticket price-ticket">
+          <div class="ticket-head">
+            <h2 id="pricing-title" class="ticket-name">One plan</h2>
+            <span class="ticket-no">Every phone <br>on your crew</span>
+          </div>
+          <p class="price"><span class="price-num">$79</span> a month</p>
+          <ul class="leaders">
+            <li><span>Receipts</span><b>Unlimited</b></li>
+            <li><span>Crew phones</span><b>All included</b></li>
+            <li><span>Bookkeeper page</span><b>Included</b></li>
+            <li><span>QuickBooks Online sync</span><b>Included</b></li>
+          </ul>
+          <div class="founders">
+            <p><strong>First 10 shops pay $59 a month,</strong> locked in for as long as you stay.</p>
+            <p>Spots left: <span class="ph">[REAL COUNT]</span></p>
+          </div>
+          <ul class="leaders leaders-extra">
+            <li><span>Pay for a year</span><b>$790</b></li>
+            <li><span>Shoebox Catch-Up (optional)</span><b>$149 once</b></li>
+          </ul>
+          <p class="small">Shoebox Catch-Up: upload photos of your old receipts and we file them under your jobs. Paying for a year saves $158 compared with 12 months at $79.</p>
+          <a class="btn btn-wide" href="#signup">Start my first week</a>
+        </div>
+
+        <div id="promise" class="promise" aria-labelledby="promise-title">
+          <img class="promise-stamp" src="assets/bottom-dollar-stamp.svg" alt="" width="858" height="250">
+          <h2 id="promise-title">Our 60-day promise</h2>
+          <p>Text us every receipt for 60 days. If we do not find one job that lost money or one charge you missed, you get every dollar back.</p>
+          <p>There is no free trial. This promise is how you try it. To ask for your money back, you fill out a short form. You do not have to call anyone.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICKBOOKS + NO APP -->
+    <section id="fit" class="fit" aria-labelledby="fit-title">
+      <div class="wrap">
+        <h2 id="fit-title" class="underline">Fits how you already work</h2>
+        <div class="fit-grid">
+          <div>
+            <h3>No app to download</h3>
+            <p>Save one number in your phone like any contact. You and your crew text it the same way you text anyone. Each crew member joins by texting a short code, like JOIN SMITHELECTRIC.</p>
+          </div>
+          <div>
+            <h3>Works with QuickBooks Online</h3>
+            <p>Connect it with one button if you want. Each receipt goes in as an expense under the right job, with the photo attached. You can skip this and connect later.</p>
+            <p>Bottom Dollar does the profit math itself, so the weekly text works on any QuickBooks Online plan, or with no QuickBooks at all.</p>
+          </div>
+          <div>
+            <h3>A page for your bookkeeper</h3>
+            <p>Your bookkeeper gets a read-only page with every receipt by job, plus a spreadsheet download (CSV). They can look. They cannot change anything.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ: native details/summary, works with keyboard and no JS -->
+    <section id="faq" class="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-wrap">
+        <h2 id="faq-title" class="underline">Questions</h2>
+        <details>
+          <summary>Do I need to download an app?</summary>
+          <p>No. You text a phone number. The only website you ever need is for signup, adding crew phones, and the bookkeeper page.</p>
+        </details>
+        <details>
+          <summary>What if I forget to say which job?</summary>
+          <p>We text back and ask. The text lists your open jobs so you can answer with one word.</p>
+        </details>
+        <details>
+          <summary>Why do you ask about crew hours?</summary>
+          <p>Receipts only show materials. Without hours, a job would look like it made more than it really did. Each Friday we ask, and a quick reply like "Smith 12" is enough.</p>
+        </details>
+        <details>
+          <summary>Does it cost more to add my crew?</summary>
+          <p>No. Every crew phone is included in the one price. Each person agrees to get texts on their own phone.</p>
+        </details>
+        <details>
+          <summary>Do I have to use QuickBooks?</summary>
+          <p>No. The weekly text works without it. If you use QuickBooks Online, you can connect it and receipts go straight in.</p>
+        </details>
+        <details>
+          <summary>Is there a free trial?</summary>
+          <p>No. Instead, you get the 60-day promise. If 60 days of receipts turn up no losing job and no missed charge, you get your money back.</p>
+        </details>
+        <details>
+          <summary>Does it do estimates or invoices?</summary>
+          <p>No. Bottom Dollar does one job: it tells you what each job made and what you may have missed. Keep using what you use now for estimates and invoices.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- SIGNUP placeholder: checkout is not wired yet, so no dead form -->
+    <section id="signup" class="signup" aria-labelledby="signup-title">
+      <div class="wrap signup-wrap">
+        <h2 id="signup-title">Start my first week</h2>
+        <p class="soon">Online signup is coming soon.</p>
+        <p>When it opens, it will take three short steps:</p>
+        <ol class="signup-steps">
+          <li>Pick monthly or yearly and pay on a secure Stripe page.</li>
+          <li>Tell us your company name, your cell number, your time zone, and what one hour of crew time costs you.</li>
+          <li>Get a welcome text with three examples. Then text your first receipt.</li>
+        </ol>
+        <p>Want one of the first 10 spots at $59 a month? Text or call <span class="ph">[PHONE]</span>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <img src="assets/bottom-dollar-icon.svg" alt="" width="56" height="56" loading="lazy">
+        <p class="footer-name">Bottom Dollar</p>
+        <address>
+          [COMPANY LEGAL NAME]<br>
+          [POSTAL ADDRESS]<br>
+          [CITY, STATE ZIP]<br>
+          Email: [EMAIL]
+        </address>
+      </div>
+      <div class="sms-note">
+        <h2>About our texts</h2>
+        <p>When you sign up, you can choose to get texts from Bottom Dollar. The box is not checked unless you check it. We send receipt replies, questions about your jobs, the Friday hours question, and one weekly report. Message frequency varies. Message and data rates may apply. Reply STOP to end texts. Reply HELP for help. Agreeing to texts is not a condition of buying.</p>
+        <p>[PRIVACY POLICY] and [TERMS] pages are coming before launch.</p>
+        <p class="small">QuickBooks is a trademark of Intuit Inc. Bottom Dollar is not made by Intuit.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
